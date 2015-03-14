@@ -1,8 +1,10 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{63297B98-5CED-492C-A5B7-A5B4F73CF142}"
 	ProjectSection(SolutionItems) = preProject
+		paket.cmd = paket.cmd
 		paket.dependencies = paket.dependencies
 		paket.lock = paket.lock
 	EndProjectSection
@@ -34,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ActiveEtl.Tests", "tests\ActiveEtl.Tests\ActiveEtl.Tests.fsproj", "{96E2F0B6-DCCF-4BA1-973A-5350C74EAB12}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ActiveEtl.Worker", "ActiveEtl.Worker\ActiveEtl.Worker.fsproj", "{2DD47A2F-7AD8-4137-BB7A-F011C65F5AB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,10 @@ Global
 		{96E2F0B6-DCCF-4BA1-973A-5350C74EAB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96E2F0B6-DCCF-4BA1-973A-5350C74EAB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96E2F0B6-DCCF-4BA1-973A-5350C74EAB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD47A2F-7AD8-4137-BB7A-F011C65F5AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD47A2F-7AD8-4137-BB7A-F011C65F5AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD47A2F-7AD8-4137-BB7A-F011C65F5AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD47A2F-7AD8-4137-BB7A-F011C65F5AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
