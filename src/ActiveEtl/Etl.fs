@@ -1,4 +1,5 @@
 ﻿namespace Eleven19.ActiveEtl
+open Eleven19.ActiveEtl.Data
 
 type ActiveEtlConfig = 
   {

@@ -1,17 +1,24 @@
 NUGET
   remote: https://nuget.org/api/v2
   specs:
+    Akka (0.8.0)
+      Newtonsoft.Json (>= 6.0.1)
     Chessie (0.0.23)
       FSharp.Core
     CsvHelper (2.11.1.1)
     FAKE (3.23.0)
+    FakeItEasy (1.25.2)
+    FluentAssertions (3.3.0)
     FSharp.Compiler.Service (0.0.86)
     FSharp.Core (3.1.2.1)
+    FSharp.Data (2.1.1)
+      Zlib.Portable (>= 1.10.0) - framework: portable-net40+sl50+wp80+win80
     FSharp.Formatting (2.7.5)
       FSharp.Compiler.Service (>= 0.0.82)
       FSharpVSPowerTools.Core (>= 1.7.0)
     FSharpVSPowerTools.Core (1.7.0)
       FSharp.Compiler.Service (>= 0.0.81)
+    FsPickler (1.0.15)
     Insight.Database (5.2.3)
       Insight.Database.Core (>= 5.2.3)
     Insight.Database.Core (5.2.3)
@@ -24,12 +31,29 @@ NUGET
     Microsoft.Net.Http (2.2.29)
       Microsoft.Bcl (>= 1.1.10)
       Microsoft.Bcl.Build (>= 1.0.14)
+    Newtonsoft.Json (6.0.8)
     NUnit (2.6.4)
     NUnit.Runners (2.6.4)
     Octokit (0.7.3)
       Microsoft.Net.Http
     odp.net.managed (121.1.2)
+    RegexProvider (0.0.4)
     SourceLink.Fake (0.4.2)
+    Suave (0.26.1)
+      FSharp.Core (>= 3.1.2.1)
+      FsPickler (>= 1.0.7)
+    UnionArgParser (0.8.6)
+    xunit (2.0.0)
+      xunit.assert (2.0.0)
+      xunit.core (2.0.0)
+    xunit.abstractions (2.0.0)
+    xunit.assert (2.0.0)
+    xunit.core (2.0.0)
+      xunit.extensibility.core (2.0.0)
+    xunit.extensibility.core (2.0.0)
+      xunit.abstractions (2.0.0)
+    xunit.runner.visualstudio (2.0.0)
+    Zlib.Portable (1.10.0)
 GITHUB
   remote: fsharp/FAKE
   specs:

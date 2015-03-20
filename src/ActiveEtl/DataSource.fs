@@ -1,4 +1,4 @@
-﻿namespace Eleven19.ActiveEtl
+﻿namespace Eleven19.ActiveEtl.Data
 
 module DataSource =
   open System
