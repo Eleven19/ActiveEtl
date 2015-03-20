@@ -1,6 +1,14 @@
-﻿namespace Eleven19.ActiveEtl
+﻿namespace Eleven19.ActiveEtl.Data
+open System
+open System.Data
 
 type ConnectionSettings = {
+  ConnectionName:string
+  ConnectionString:string
+  ProviderName:string
+}
+
+type ConnectionInfo = {
   ConnectionName:string
   ConnectionString:string
   ProviderName:string
@@ -22,3 +30,15 @@ module ConnectionManager =
   let createRegistry settings =
     {Settings=settings}
     
+type ConnectionInfoProvider = unit -> seq<ConnectionInfo>
+
+[<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
+module Connection =
+  open System
+  open System.Data
+
+  let tryGetConnectionInfo (connectionInfos:seq<ConnectionInfo>) connectionName =
+    let connectionInfoMap = 
+      connectionInfos|> Seq.map (fun c->c.ConnectionName,c) |> Map.ofSeq
+
+    connectionInfoMap |> Map.tryFind connectionName      
