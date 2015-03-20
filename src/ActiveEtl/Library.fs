@@ -1,4 +1,4 @@
-namespace ActiveEtl
+namespace Eleven19.ActiveEtl
 
 /// Documentation for my library
 ///

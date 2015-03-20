@@ -1,6 +1,6 @@
-module ActiveEtl.Tests
+module Eleven19.ActiveEtl.Tests
 
-open ActiveEtl
+open Eleven19.ActiveEtl
 open NUnit.Framework
 
 [<Test>]

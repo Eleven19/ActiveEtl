@@ -3,6 +3,7 @@ NUGET
   specs:
     Chessie (0.0.23)
       FSharp.Core
+    CsvHelper (2.11.1.1)
     FAKE (3.23.0)
     FSharp.Compiler.Service (0.0.86)
     FSharp.Core (3.1.2.1)
