@@ -1,13 +1,15 @@
-﻿module Eleven19.ActiveEtl.DataReader
+﻿namespace Eleven19.ActiveEtl.Data
 open System
 open System.Data
+open System.Runtime.CompilerServices
 
-[<System.Runtime.CompilerServices.Extension>]
+[<Extension>]
 [<AutoOpen>]
 module DataReader =
   open System
   open System.Data
   open System.Collections.Generic
+  open FSharp.Data.DynamicSql
 
   type DataReaderColumnInfo = {
       ColumnName:string
@@ -18,9 +20,9 @@ module DataReader =
   type IDataReader with
     member this.GetColumnInfo() =
       let dbSchema = this.GetSchemaTable()
-      dbSchema.Columns |> Seq.cast<DataColumn> 
-      |> Seq.map (fun col ->
-        {ColumnName=col.ColumnName; Ordinal=col.Ordinal; DataType=col.DataType}
+      dbSchema.Rows |> Seq.cast<DataRow> 
+      |> Seq.map (fun row ->
+        {ColumnName=row.Field("ColumnName") ; Ordinal=row.Field("ColumnOrdinal"); DataType=row.Field("DataType")}
       )
 
     member this.GetColumnMapping() =
@@ -34,6 +36,9 @@ module DataReader =
         this.GetColumnInfo() |> Seq.map (fun info -> (info.Ordinal, info)) |> Map.ofSeq 
 
       map :> IDictionary<int,DataReaderColumnInfo>
+
+  [<Extension>]
+  let GetColumnInfo (dataReader:IDataReader) = dataReader.GetColumnInfo()
 
   type DataReaderColumnMappings(dataReader:IDataReader)=
     let byName = lazy(dataReader.GetColumnMapping())

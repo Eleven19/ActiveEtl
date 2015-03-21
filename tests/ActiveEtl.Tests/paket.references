@@ -2,3 +2,6 @@ NUnit
 NUnit.Runners
 Insight.Database
 CsvHelper
+xunit
+FluentAssertions
+FakeItEasy
